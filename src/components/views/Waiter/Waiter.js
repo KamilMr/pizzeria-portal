@@ -1,0 +1,17 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Waiter.module.scss';
+
+const Waiter = (props) => {
+  return ( 
+    <div className={styles.component}>
+      <h2>Waiter view</h2>
+    </div>
+  );
+};
+
+Waiter.prototype = {
+
+};
+ 
+export default Waiter;
