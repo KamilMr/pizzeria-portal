@@ -1,11 +1,16 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styles from './Tables.module.scss';
+import { Link } from 'react-router-dom';
+
 
 const Tables = (props) => {
   return ( 
     <div className={styles.component}>
       <h2>Tables view</h2>
+      <li><Link to="/tables/booking/">Booking</Link></li>
+      <li><Link to="/tables/booking/:id">Booking id</Link></li>
+      <li><Link to="/tables/events/new">New Events</Link></li>
+      <li><Link to="/tables/events/:id">New Booking</Link></li>
     </div>
   );
 };
