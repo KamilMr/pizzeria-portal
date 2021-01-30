@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Kitchen.module.scss';
 
 const Kitchen = (props) => {
@@ -8,10 +7,6 @@ const Kitchen = (props) => {
       <h2>Kitchen view</h2>
     </div>
   );
-};
-
-Kitchen.prototype = {
-
 };
  
 export default Kitchen;

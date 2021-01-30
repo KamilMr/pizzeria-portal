@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HomePage.module.scss';
 
 const HomePage = () => (
-  <div className="App">
+  <div className={styles.component}>
     <header className="App-header">
       <p>
     Hello <code>src/App.js</code> and save to reload.
