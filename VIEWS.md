@@ -40,7 +40,7 @@
     - numer stolika edytowalny
     - menu produktów 
     - opcje wybranego produktu
-    - zamówienie  (zamówione produkty z opcjami i ceną)
+    - zamówienie (zamówione produkty z opcjami i ceną)
     - kwotę zamówienia
 - `/waiter/order/:id`
     - jak powyższa

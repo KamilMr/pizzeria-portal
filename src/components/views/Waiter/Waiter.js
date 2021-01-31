@@ -19,6 +19,7 @@ const demoContent = [
 ];
 
 const renderActions = status => {
+  console.log(status);
   switch (status) {
     case 'free':
       return (
