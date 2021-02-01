@@ -1,10 +1,10 @@
 # Dashboard
 
 - `/`
-    - statystyki dzisiejszych zamówień (zdalne i lokalne)
-    - lista rezerwacji i eventów zaplanowanych na dzisiaj
+    - statystyki dzisiejszych zamówień (zdalne i lokalne) [WORKING]
+    - lista rezerwacji i eventów zaplanowanych na dzisiaj [WORKING]
 
-# Logowanie
+# Logowanie [DONE]
 
 - `/login`
     - pola na login i hasło [DONE]
