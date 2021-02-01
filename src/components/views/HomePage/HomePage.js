@@ -5,7 +5,7 @@ const HomePage = () => (
   <div className={styles.component}>
     <header className="App-header">
       <p>
-    Hello <code>src/App.js</code> and save to reload.
+    Dashboard.
       </p>
       <a
         className="App-link"

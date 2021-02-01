@@ -7,8 +7,8 @@
 # Logowanie
 
 - `/login`
-    - pola na login i hasło
-    - przycisk do zalogowania (link do dashobardu)
+    - pola na login i hasło [DONE]
+    - przycisk do zalogowania (link do dashobardu) [DONE]
 
 # Widok dostępności stolików
 
@@ -37,11 +37,11 @@
         - w kolumnach rodzaje informacji: ( status stolika, czas od ostatniej aktywności )
         - w ostatniej kolumnie dostępne akcje dla danego stolika
 - `/waiter/order/new`
-    - numer stolika edytowalny
-    - menu produktów 
-    - opcje wybranego produktu
-    - zamówienie (zamówione produkty z opcjami i ceną)
-    - kwotę zamówienia
+    - numer stolika edytowalny [DONE]
+    - menu produktów [DONE]
+    - opcje wybranego produktu [DONE]
+    - zamówienie (zamówione produkty z opcjami i ceną) [WORKING]
+    - kwotę zamówienia [WORKING]
 - `/waiter/order/:id`
     - jak powyższa
 

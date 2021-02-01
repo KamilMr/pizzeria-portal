@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import Radio from '@material-ui/core/Radio';
+import Checkbox from '@material-ui/core/Checkbox';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -52,7 +52,7 @@ const Waiter = () => (
               </Select>
             </FormControl>
           </TableCell>
-          <TableCell>Cost</TableCell>
+          <TableCell>Total: </TableCell>
           <TableCell><Button>Save</Button></TableCell>
         </TableRow>
         <TableRow>
@@ -74,14 +74,14 @@ const Waiter = () => (
             <TableCell>
               <FormControl component="fieldset">
                 <RadioGroup>
-                  <FormControlLabel value="dish" control={<Radio />} label={row.dish}/>
+                  <FormControlLabel value="dish" control={<Checkbox />} label={row.dish}/>
                 </RadioGroup>
               </FormControl>
             </TableCell>
             <TableCell>
               <FormControl component="fieldset">
                 <RadioGroup>
-                  <FormControlLabel value="additions" control={<Radio />} label={row.options + ' zł'}  />
+                  <FormControlLabel value="additions" control={<Checkbox />} label={row.options + ' zł'}  />
                 </RadioGroup>
               </FormControl>
             </TableCell>
