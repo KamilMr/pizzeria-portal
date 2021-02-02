@@ -39,7 +39,6 @@ const HomePage = () => (
               );
             }
           })}
-     
         </Paper>
       </Grid>
       <Grid item xs={3}>
