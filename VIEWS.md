@@ -12,26 +12,26 @@
 
 # Widok dostępności stolików
 
-- `/tables`
-    - wybór daty i godziny
+- `/tables` [WORKING]
+    - wybór daty i godziny [DONE]
     - tabela z listą rezerwacji oraz wydarzeń
-        - każda kolumna = 1 stolik
-        - każdy wiersz = 30 min blok
-        - ma przypominać widok tygodnia w kalendarzu google, gdzie w kolumnach zamiast dni są różne stoliki
+        - każda kolumna = 1 stolik [DONE]
+        - każdy wiersz = 30 min blok [DONE]
+        - ma przypominać widok tygodnia w kalendarzu google, gdzie w kolumnach zamiast dni są różne stoliki [DONE]
         - po kliknięciu rezerwacji lub eventu przechodzimy na stronę szczegółów
 - `/tables/booking/:id`
-    - zawiera wszystkie infromacje dotyczące rezerwacji
-    - musi umożliwać edycję i zapisanie zmian
+    - zawiera wszystkie infromacje dotyczące rezerwacji [WORKING]
+    - musi umożliwać edycję i zapisanie zmian [WORKING]
 - `/tables/booking/new`
-    - musi umożliwać edycję i zapisanie zmian
+    - musi umożliwać edycję i zapisanie zmian [DONE]
 - `/tables/events/:id`
-    - musi umożliwać edycję i zapisanie zmian
+    - musi umożliwać edycję i zapisanie zmian [WORKING]
 - `/tables/events/new`
-    - musi umożliwać edycję i zapisanie zmian
+    - musi umożliwać edycję i zapisanie zmian [DONE]
 
 # Widok kelnera
 
-- `/waiter`
+- `/waiter` [DONE]
     - tabela
         - w wierszach stoliki
         - w kolumnach rodzaje informacji: ( status stolika, czas od ostatniej aktywności )
@@ -48,8 +48,8 @@
 # Widok kuchni
 
 - `/kitchen`
-    - wyświetlać listę zamówień w kolejności ich złożenia
-    - lista zawiera 
+    - wyświetlać listę zamówień w kolejności ich złożenia [DONE]
+    - lista zawiera [DONE]
         - nr stolika lub zamówienia zdalnego
         - pełne informacje dotyczące zamówionych dań
     -możliwość zaznaczenia zamówienia jako zrealizowane

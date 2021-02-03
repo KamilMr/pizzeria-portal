@@ -19,7 +19,6 @@ const demoContent = [
 ];
 
 const renderActions = status => {
-  console.log(status);
   switch (status) {
     case 'free':
       return (
@@ -55,6 +54,7 @@ const renderActions = status => {
 
 const Waiter = () => (
   <Paper className={styles.component}>
+    <div className={styles.componet}><h1>Waiter View</h1></div>
     <Table>
       <TableHead>
         <TableRow>
@@ -75,7 +75,7 @@ const Waiter = () => (
             </TableCell>
             <TableCell>
               {row.order && (
-                <Button to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
                   {row.order}
                 </Button>
               )}

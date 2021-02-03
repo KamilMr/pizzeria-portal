@@ -2,10 +2,19 @@
 
 .component {
     padding: $base-size;
+    position: relative;
 }
 
 .tableWidth {
-    width: 800px;
+    width: 700px;
+    display: inline-block;
+}
+
+.calendar {
+    margin: 0 0 0 65px;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
 }
 
 .header {

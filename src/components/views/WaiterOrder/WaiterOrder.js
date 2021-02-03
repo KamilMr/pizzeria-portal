@@ -7,15 +7,15 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import Checkbox from '@material-ui/core/Checkbox';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import FormLabel from '@material-ui/core/FormLabel';
+import { Link } from 'react-router-dom';
 
 
 const menuContent = [
@@ -26,20 +26,14 @@ const menuContent = [
   {id: '5', dish: 'Kontlet schabowy z ziemniakami', options: 'surówka  2', cost: 12},
   {id: '6', dish: 'Rosół', options: 'wkładka mięsna  2', cost: 12},
 ];
-
-// const countPrice = price => {
-//   let adding = price + 
-  
-//   return ()
-// }
-
 const Waiter = () => (
   <Paper>
+    <div className={styles.componet}><h1>New Order</h1></div>
     <Table>
       <TableHead>
         <TableRow>
-          <TableCell>
-            <FormControl>
+          <TableCell >
+            <FormControl className={styles.table_narrow}>
               <InputLabel id='table-number'>Table</InputLabel>
               <Select labelId='table-number'>
                 <MenuItem value={`0`}>0</MenuItem>
