@@ -21,11 +21,11 @@
         - po kliknięciu rezerwacji lub eventu przechodzimy na stronę szczegółów
 - `/tables/booking/:id`
     - zawiera wszystkie infromacje dotyczące rezerwacji [WORKING]
-    - musi umożliwać edycję i zapisanie zmian [WORKING]
+    - musi umożliwać edycję i zapisanie zmian [DONE]
 - `/tables/booking/new`
     - musi umożliwać edycję i zapisanie zmian [DONE]
 - `/tables/events/:id`
-    - musi umożliwać edycję i zapisanie zmian [WORKING]
+    - musi umożliwać edycję i zapisanie zmian [DONE]
 - `/tables/events/new`
     - musi umożliwać edycję i zapisanie zmian [DONE]
 
@@ -43,7 +43,7 @@
     - zamówienie (zamówione produkty z opcjami i ceną) [WORKING]
     - kwotę zamówienia [WORKING]
 - `/waiter/order/:id`
-    - jak powyższa
+    - jak powyższa [DONE]
 
 # Widok kuchni
 
