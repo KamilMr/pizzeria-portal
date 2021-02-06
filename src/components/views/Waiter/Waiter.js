@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 
 class Waiter extends React.Component {
   static propTypes = {
-    tables: PropTypes.node,
+    tables: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     updateTables: PropTypes.func,
     fetchTables: PropTypes.func,
     // w propTypes użyliśmy PropTypes.shape, który pozwala nam zdefiniować typy właściwości obiektu loading,
@@ -24,18 +24,16 @@ class Waiter extends React.Component {
   componentDidMount(){
     const { fetchTables } = this.props;
     //A skąd wzięła się ta funkcja? Została przekazana do propsa przez kontener komponentu – to tam przypisujemy do tego propsa następującą funkcję: () => dispatch(fetchFromAPI())
-    fetchTables();
-    console.log(this.props);
-  
+    fetchTables();  
   }
 
-  renderActions(status){
+  renderActions(status, table){
     const { updateTables } = this.props;
     switch (status) {
       case 'free':
         return (
           <>
-            <Button onClick={() => updateTables({id: 0, status: 'thinking'})}>thinking</Button>
+            <Button onClick={() => updateTables(table, 'thinking')}>thinking</Button>
             <Button>new order</Button>
           </>
         );
@@ -101,6 +99,7 @@ class Waiter extends React.Component {
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">
                     {row.id}
+                    {console.log(row.id)}
                   </TableCell>
                   <TableCell>
                     {row.status}
@@ -113,7 +112,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status)}
+                    {this.renderActions(row.status, row.id)}
                   </TableCell>
                 </TableRow>
               ))}

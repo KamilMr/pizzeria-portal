@@ -19,14 +19,14 @@ const UPDATE_TABLE = createActionName('UPDATE_TABLE');
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
-export const sendStarted = payload => ({ payload, type: UPDATE_TABLE });
+export const updateStatus = (table, status) => ({ table, status, type: UPDATE_TABLE });
 
 
 /* thunk creators */
 export const fetchFromAPI = () => {
   return (dispatch, getState) => {
     dispatch(fetchStarted());
-  
+
     Axios
       .get(`${api.url}/api/${api.tables}`)
       .then(res => {
@@ -38,10 +38,19 @@ export const fetchFromAPI = () => {
   };
 };
 
-export const updateTablesAPI = () => {
+export const updateTablesAPI = (table, status) => {
   return(dispatch, getState) => {
-    console.log(dispatch);
-    dispatch(sendStarted());
+    dispatch(updateStatus(table, status));
+    
+    Axios
+      .get(`${api.url}/api/${api.tables}`)
+      .then((res) => {
+        dispatch(fetchSuccess(res.data));
+      })
+      .catch(err => {
+        dispatch(fetchError(err.message || true));
+      });
+
     
   };
 };
@@ -82,6 +91,7 @@ export default function reducer(statePart = [], action = {}) {
     case UPDATE_TABLE: {
       return {
         ...statePart,
+        data: statePart.data.map(object => object.id === action.table ? {...object, status: action.status} : object ),
       };
     }
     default:

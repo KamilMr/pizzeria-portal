@@ -7,18 +7,9 @@ const mapStateToProps = (state) => ({
   loading: getLoadingState(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, props) => ({
   fetchTables: () => dispatch(fetchFromAPI()),
-  updateTables: content => {
-    return (
-      dispatch(updateTablesAPI({
-        id: content.id,
-        status: content.status,
-      })),
-      console.log(content)
-    );
-
-  },
+  updateTables: (table,status) => dispatch(updateTablesAPI(table, status)),
   
 });
 
