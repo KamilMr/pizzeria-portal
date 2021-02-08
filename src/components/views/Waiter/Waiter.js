@@ -39,23 +39,23 @@ class Waiter extends React.Component {
         );
       case 'thinking':
         return (
-          <Button>new order</Button>
+          <Button onClick={() => updateTables(table, 'ordered')}>new order</Button>
         );
       case 'ordered':
         return (
-          <Button>prepared</Button>
+          <Button onClick={() => updateTables(table, 'prepared')}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button>delivered</Button>
+          <Button onClick={() => updateTables(table, 'delivered')}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button>paid</Button>
+          <Button onClick={() => updateTables(table, 'paid')}>paid</Button>
         );
       case 'paid':
         return (
-          <Button>free</Button>
+          <Button onClick={() => updateTables(table, 'free')}>free</Button>
         );
       default:
         return null;
@@ -99,7 +99,6 @@ class Waiter extends React.Component {
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">
                     {row.id}
-                    {console.log(row.id)}
                   </TableCell>
                   <TableCell>
                     {row.status}

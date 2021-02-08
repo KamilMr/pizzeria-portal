@@ -39,19 +39,15 @@ export const fetchFromAPI = () => {
 };
 
 export const updateTablesAPI = (table, status) => {
-  return(dispatch, getState) => {
-    dispatch(updateStatus(table, status));
-    
+  return(dispatch, getState) => {   
     Axios
-      .get(`${api.url}/api/${api.tables}`)
+      .put(`${api.url}/api/tables/${table}`,{status})
       .then((res) => {
-        dispatch(fetchSuccess(res.data));
+        dispatch(updateStatus(res.data.id, res.data.status));
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));
       });
-
-    
   };
 };
 
@@ -70,6 +66,7 @@ export default function reducer(statePart = [], action = {}) {
       };
     }
     case FETCH_SUCCESS: {
+      console.log('feetch-s');
       return {
         ...statePart,
         loading: {
